@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: var(--Pale-blue);
+    height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+    /* background: var(--Desaturated-blue); */
+    background: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    width: 450px;
+    margin: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    line-height: 1.6;
+    transform: scaleX(1.05);
+}
+
+.card img {
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+}
+
+.card .title {
+    color: var(--Dark-blue);
+    font-weight: var(--fw-black);
+    padding: 2.5rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.card .description {
+    color: var(--Desaturated-blue);
+    padding: 1rem 3rem 2rem 3rem;
+}
+
+.card .plan-selector {
+    background-color: var(--Very-pale-blue);
+    border-radius: 0.75rem;
+    margin: 0 10% 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.card .plan-selector__icon {
+    margin: 3%;
+}
+
+.card .plan-selector__price {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card .plan-selector__container {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.card .plan-selector__price-title {
+    font-size: 0.825rem;
+}
+
+.card .plan-selector__price-description {
+    color: var(--Desaturated-blue);
+    font-size: 0.9rem;
+}
+
+.card .plan-selector__change-plan {
+    padding: 1rem;
+    font-size: 0.75rem;
+}
+
+.payment-proceed, .cancel-order {
+    border: none;
+    font-weight: var(--fw-bold);
+    width: 75%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.payment-proceed {
+    color: var(--Very-pale-blue);
+    background-color: var(--Bright-blue);
+    font-size: 0.9rem;
+    margin: 2rem 2rem 1rem 2rem;
+    box-shadow: -2px 4px 20px 5px hsla(245, 75%, 52%, 0.35);;
+}
+
+.cancel-order {
+    background: transparent;
+    color: var(--Desaturated-blue);
+    margin-bottom: 2rem;
+    font-weight: var(--fw-bold);
+    font-size: 0.9rem;
+}
